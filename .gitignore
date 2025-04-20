@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 *pkl
 text8
+wandb*
 
 # C extensions
 *.so
