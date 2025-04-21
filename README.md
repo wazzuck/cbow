@@ -13,7 +13,7 @@ $ conda init --all
 ```sh
 $ conda create --name wrd python=3.11 -y
 $ conda activate wrd
-$ pip install torch wandb
+$ pip install torch wandb tqdm numpy
 ```
 
 

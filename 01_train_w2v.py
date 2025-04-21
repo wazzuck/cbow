@@ -6,6 +6,7 @@ import dataset       # Custom module likely containing the dataset class (Wiki)
 import evaluate      # Custom module likely containing evaluation functions (topk)
 import datetime      # For getting the current timestamp to name runs and checkpoints
 import model         # Custom module likely containing the CBOW model definition
+import os            # Add os import
 
 
 # Basic setup and configuration
@@ -76,6 +77,8 @@ for epoch in range(5):
     # --- Checkpointing after each epoch ---
     # Define a unique filename for the checkpoint based on timestamp and epoch number
     checkpoint_name = f'{ts}.{epoch + 1}.cbow.pth'
+    # Ensure the checkpoints directory exists
+    os.makedirs('./checkpoints', exist_ok=True)
     # Save the model's learned parameters (state dictionary) to a file
     # Note: This assumes a './checkpoints/' directory exists.
     # If not, this line will cause an error. A check/creation step might be needed.
